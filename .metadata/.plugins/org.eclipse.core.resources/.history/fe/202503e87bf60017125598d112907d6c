@@ -1,0 +1,21 @@
+package jenkinsDemo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
+
+
+@SpringBootApplication
+@Controller
+public class DemoJenkinsApplication {
+
+	@RequestMapping("/")
+	@ResponseBody
+	String home() {
+		return "Greetings from Java Tutorial Network";
+	}
+	
+	public static void main(String[] args) {
+		SpringApplication.run(DemoJenkinsApplication.class, args);
+	}
+}
